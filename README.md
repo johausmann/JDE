@@ -1,45 +1,57 @@
-# JDE - Jo's Desktop Environment
+# 🖥️ JDE – Jo's Desktop Environment
 
-A minimal Arch Linux desktop environment setup using spectrwm and polybar.
+JDE is a minimalist desktop environment setup for **Arch Linux**, built around **spectrwm** and **polybar**.  
+The goal is a reproducible, lightweight, and maintainable system using modular shell setup scripts and clean dotfile management via **GNU stow**.
 
-## Features
+---
 
-- **Window Manager**: spectrwm - A minimal tiling window manager
-- **Status Bar**: polybar - A customizable status bar
-- **Dotfiles Management**: GNU stow for easy configuration management
-- **Compositor**: picom for transparency and effects
-- **Terminal**: alacritty as the default terminal emulator
-- **Application Launcher**: dmenu for quick application launching
+## ✨ Features
 
-## Requirements
+- 🪟 **Window Manager**: spectrwm – A minimal and efficient tiling window manager
+- 📊 **Status Bar**: polybar – A highly customizable status bar
+- 📁 **Dotfiles Management**: GNU stow for easy and transparent configuration management
+- 🌫️ **Compositor**: picom for transparency and visual effects
+- 🖥️ **Terminal**: alacritty as the default terminal emulator
+- 🚀 **Application Launcher**: rofi for fast application launching
 
-- A minimal Arch Linux installation
-- Internet connection for package installation
-- Basic understanding of terminal commands
+---
 
-## Installation
+## 📋 Requirements
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/johausmann/JDE.git
-   cd JDE
-   ```
+- 🐧 A minimal Arch Linux installation
+- 🌐 Internet connection for package installation
+- ⌨️ Basic familiarity with terminal usage
 
-2. Run the main setup script:
-   ```bash
-   ./setup.sh
-   ```
+---
 
-   This will:
-   - Install all required packages (X.org, spectrwm, polybar, etc.)
-   - Set up dotfiles using GNU stow
+## ⚙️ Installation
 
-3. Start the desktop environment:
-   ```bash
-   startx
-   ```
+### 1️⃣ Clone the repository
 
-## Manual Installation
+```bash
+git clone https://github.com/johausmann/JDE.git
+cd JDE
+
+### 2️⃣ Run the main setup script
+
+```bash
+/setup.sh
+```
+
+This script will:
+
+📦 Install all required packages (X-org, spectrwm, polybar, etc.)
+
+🔗 Set up dotfiles using GNU stow
+
+### 3️⃣ Start the desktop environment
+
+```bash
+startx
+```
+Or you can start the session wit a login manager such as **lemurs**
+
+## 🛠️ Manual Installation
 
 If you prefer to run the setup scripts individually:
 
@@ -47,72 +59,39 @@ If you prefer to run the setup scripts individually:
 # Install system packages
 ./setup/01-install-packages.sh
 
-# Setup dotfiles
+# Set up dotfiles
 ./setup/02-setup-dotfiles.sh
+
 ```
 
-## Directory Structure
+## 🗂️ Directory Structure
 
 ```
 JDE/
-├── setup.sh                    # Main setup script
+├── setup.sh                     # Main setup script
 ├── setup/
-│   ├── 01-install-packages.sh  # Package installation script
-│   └── 02-setup-dotfiles.sh    # Dotfiles setup script
-└── dotfiles/                   # Configuration files
-    ├── spectrwm/               # spectrwm configuration
-    ├── polybar/                # polybar configuration
-    └── X11/                    # X.org initialization
+│   ├── 01-install-packages.sh   # Package installation
+│   └── 02-setup-dotfiles.sh     # Dotfiles setup using GNU stow
+└── dotfiles/                    # Managed configuration files
+    ├── spectrwm/                # spectrwm configuration
+    ├── polybar/                 # polybar configuration
+    └── X11/                     # Xorg / Xinit configuration
 ```
 
-## Customization
+## 🎨 Customization
 
-All configuration files are located in the `dotfiles/` directory and are managed with GNU stow. See `dotfiles/README.md` for more information on managing your dotfiles.
+All configuration files live in the dotfiles/ directory and are managed using GNU stow.
 
-### Key Bindings (Default)
-
-- `Super + Enter`: Open terminal
-- `Super + d`: Application launcher (dmenu)
-- `Super + Shift + q`: Quit spectrwm
-- `Super + Shift + r`: Restart spectrwm
-- `Super + Shift + c`: Close window
-- `Super + j/k`: Focus next/previous window
-- `Super + h/l`: Resize master area
-- `Super + 1-9`: Switch to workspace
-- `Super + Shift + 1-9`: Move window to workspace
-
-## Adding More Dotfiles
-
-To add your own configuration files, create a new directory in `dotfiles/` with the appropriate structure and run:
+To apply or update configurations manually:
 
 ```bash
 cd dotfiles
-stow -t ~ your-package-name
+stow -t ~ spectrwm
 ```
 
-See `dotfiles/README.md` for detailed instructions.
+See dotfiles/README.md for details on managing and extending dotfiles.
 
-## Troubleshooting
+## 📄 License
 
-### X.org fails to start
-
-- Make sure you have a graphics driver installed
-- Check the X.org log: `cat /var/log/Xorg.0.log`
-
-### Missing packages
-
-Re-run the package installation script:
-```bash
-./setup/01-install-packages.sh
-```
-
-### Dotfiles not applied
-
-Re-run the dotfiles setup script:
-```bash
-./setup/02-setup-dotfiles.sh
-```
-
-## License
-
-This project is licensed under the Apache License 2.0 - see the LICENSE file for details. 
+This project is licensed under the Apache License 2.0.
+See the LICENSE file for more information.

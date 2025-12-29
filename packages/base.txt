@@ -1,0 +1,7 @@
+base-devel
+git
+stow
+neovim
+fish
+nano
+nano-syntax-highlighting

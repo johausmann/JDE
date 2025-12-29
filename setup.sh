@@ -11,24 +11,12 @@ echo "JDE - Jo's Desktop Environment Setup"
 echo "================================================"
 echo ""
 
-# Check if running as root
-if [[ $EUID -eq 0 ]]; then
-   echo "This script should not be run as root (use sudo when needed)"
-   exit 1
-fi
 
-# Ensure we're on Arch Linux
-if [[ ! -f /etc/arch-release ]]; then
-    echo "Error: This script is designed for Arch Linux"
-    exit 1
-fi
+for script in setup/*.sh; do
+  echo "==> Running $script"
+  bash "$script"
+done
 
-echo "Step 1: Installing base system packages..."
-bash "$SCRIPT_DIR/setup/01-install-packages.sh"
-
-echo ""
-echo "Step 2: Setting up dotfiles..."
-bash "$SCRIPT_DIR/setup/02-setup-dotfiles.sh"
 
 echo ""
 echo "================================================"
