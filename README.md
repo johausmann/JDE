@@ -1,26 +1,26 @@
-# 🖥️ JDE – Jo's Desktop Environment
+# 🖥️ 🐧 JDE – Jo's Desktop Environment
 
 JDE is a minimalist desktop environment setup for **Arch Linux**, built around **spectrwm** and **polybar**.  
-The goal is a reproducible, lightweight, and maintainable system using modular shell setup scripts and clean dotfile management via **GNU stow**.
+The goal is a reproducible, lightweight, and maintainable system using modular shell  scripts and clean dotfile management via **GNU stow**. This collection of scripts is intended to recreate my personal desktop setup on new machines.
 
 ---
 
 ## ✨ Features
 
-- 🪟 **Window Manager**: spectrwm – A minimal and efficient tiling window manager
-- 📊 **Status Bar**: polybar – A highly customizable status bar
-- 📁 **Dotfiles Management**: GNU stow for easy and transparent configuration management
-- 🌫️ **Compositor**: picom for transparency and visual effects
-- 🖥️ **Terminal**: alacritty as the default terminal emulator
-- 🚀 **Application Launcher**: rofi for fast application launching
+- **Window Manager**: spectrwm – A minimal and efficient tiling window manager
+- **Status Bar**: polybar – A highly customizable status bar
+- **Dotfiles Management**: GNU stow for easy and transparent configuration management
+- **Compositor**: picom for transparency and visual effects
+- **Terminal**: alacritty as the default terminal emulator
+- **Application Launcher**: rofi for fast application launching
 
 ---
 
 ## 📋 Requirements
 
-- 🐧 A minimal Arch Linux installation
-- 🌐 Internet connection for package installation
-- ⌨️ Basic familiarity with terminal usage
+- A minimal Arch Linux installation
+- Internet connection for package installation
+- Basic familiarity with terminal usage
 
 ---
 
@@ -31,13 +31,13 @@ The goal is a reproducible, lightweight, and maintainable system using modular s
 ```bash
 git clone https://github.com/johausmann/JDE.git
 cd JDE
+```
 
 ### 2️⃣ Run the main setup script
 
 ```bash
 /setup.sh
 ```
-
 This script will:
 
 📦 Install all required packages (X-org, spectrwm, polybar, etc.)
