@@ -8,11 +8,6 @@ Each subdirectory represents a "package" that can be installed with stow. The st
 
 ```
 dotfiles/
-├── spectrwm/           # spectrwm window manager configuration
-│   └── .config/
-│       └── spectrwm/
-│           ├── spectrwm.conf
-│           └── baraction.sh
 ├── polybar/            # polybar status bar configuration
 │   └── .config/
 │       └── polybar/

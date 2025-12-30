@@ -2,7 +2,7 @@
 # Install base packages for JDE
 
 source "$(dirname "$0")/../lib/utils.sh"
-package_list = "$(dirname "$0")/../packages/base.txt
+package_list="$(dirname "$0")/../packages/base.txt
 
 set -e
 

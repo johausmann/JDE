@@ -16,3 +16,6 @@ log "Installing other desktop packages from Arch repos"
 
 sudo pacman -S --needed --noconfirm \
     "$(grep -hvE '^\s*#' $package_list)"
+
+sudo systemctl enable lemurs.service
+

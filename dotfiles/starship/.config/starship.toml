@@ -1,0 +1,56 @@
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+# Replace the "❯" symbol in the prompt with "➜ "
+[character] 
+success_symbol = "[➜](bold green)"
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+format = """\
+    username\
+    hostname\
+    directory\
+    git_branch\
+    git_commit\
+    git_state\
+    git_status\
+    hg_branch\
+    package\
+    dotnet\
+    golang\
+    java\
+    nodejs\
+    php\
+    python\
+    ruby\
+    rust\
+    conda\
+    memory_usage\
+    env_var\
+    cmd_duration\
+    line_break\
+    jobs\
+    battery\
+    time\
+    character\
+    """
+
+[conda]
+style = "dimmed green"
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+truncation_length = 8
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style) in "
+trim_at = ".companyname.com"
+disabled = false
+
+[username]
+disabled = false
+style_user= "blue"
+show_always = true

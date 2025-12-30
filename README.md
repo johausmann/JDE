@@ -1,7 +1,12 @@
 # 🖥️ 🐧 JDE – Jo's Desktop Environment
 
-JDE is a minimalist desktop environment setup for **Arch Linux**, built around **spectrwm** and **polybar**.  
-The goal is a reproducible, lightweight, and maintainable system using modular shell  scripts and clean dotfile management via **GNU stow**. This collection of scripts is intended to recreate my personal desktop setup on new machines.
+JDE is a minimalist desktop environment for **Arch Linux** based on **spectrwm** and **polybar**.
+The goal is to create a lightweight, reproducible, and easy-to-maintain system that uses modular shell scripts and clear dotfile management via **GNU stow**. This collection of scripts was created to restore my personal desktop configuration on new computers and document my setup. Use at your own risk!
+
+
+** This is work in progress **
+
+<img src="images/screenshot.png" width="960" height="540">
 
 ---
 
@@ -12,13 +17,15 @@ The goal is a reproducible, lightweight, and maintainable system using modular s
 - **Dotfiles Management**: GNU stow for easy and transparent configuration management
 - **Compositor**: picom for transparency and visual effects
 - **Terminal**: alacritty as the default terminal emulator
-- **Application Launcher**: rofi for fast application launching
+- **Application Launcher**: rofi for fast application launching and menus
+- **Notification daemon**: dunst
+- **Color theme**: Nord color
 
 ---
 
 ## 📋 Requirements
 
-- A minimal Arch Linux installation
+- A minimal Arch Linux installation e.g with EndavourOS or archinstall
 - Internet connection for package installation
 - Basic familiarity with terminal usage
 
@@ -40,9 +47,9 @@ cd JDE
 ```
 This script will:
 
-📦 Install all required packages (X-org, spectrwm, polybar, etc.)
+* 📦 Install all required packages (X-org, spectrwm, polybar, etc.)
 
-🔗 Set up dotfiles using GNU stow
+* 🔗 Set up dotfiles using GNU stow
 
 ### 3️⃣ Start the desktop environment
 
@@ -60,7 +67,7 @@ If you prefer to run the setup scripts individually:
 ./setup/01-install-packages.sh
 
 # Set up dotfiles
-./setup/02-setup-dotfiles.sh
+./setup/02-setup-paru.sh
 
 ```
 
@@ -71,7 +78,7 @@ JDE/
 ├── setup.sh                     # Main setup script
 ├── setup/
 │   ├── 01-install-packages.sh   # Package installation
-│   └── 02-setup-dotfiles.sh     # Dotfiles setup using GNU stow
+│   └── 02-setup-paru.sh     # Dotfiles setup using GNU stow
 └── dotfiles/                    # Managed configuration files
     ├── spectrwm/                # spectrwm configuration
     ├── polybar/                 # polybar configuration

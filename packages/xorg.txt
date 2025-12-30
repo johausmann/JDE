@@ -3,9 +3,8 @@ xclip
 xdo
 xdotool
 xf86-input-libinput
+#AMD Driver. Replace according to your card
 xf86-video-amdgpu
-xfsprogs
-xl2tpd
 xorg-server
 xorg-xdpyinfo
 xorg-xinit
