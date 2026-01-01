@@ -1,10 +1,10 @@
 # 🖥️ 🐧 JDE – Jo's Desktop Environment
 
-JDE is a minimalist desktop environment for **Arch Linux** based on **spectrwm** and **polybar**.
+JDE is my minimalist desktop environment setup for **Arch Linux** based on **spectrwm** and **polybar** using **Nord** color scheme.
 The goal is to create a lightweight, reproducible, and easy-to-maintain system that uses modular shell scripts and clear dotfile management via **GNU stow**. This collection of scripts was created to restore my personal desktop configuration on new computers and document my setup. Use at your own risk!
 
 
-** This is work in progress **
+**This is work in progress**
 
 <img src="images/screenshot.png" width="960" height="540">
 
